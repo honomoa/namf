@@ -1,0 +1,11 @@
+{
+  "name": "namf",
+  "version": "0.0.7a",
+  "description": "node amf parser",
+  "author": "Moa Chung",
+  "private": true,
+  "dependencies" : {
+    "hexy": "~0.2.5",
+    "MoaLog": "honomoa/MoaLog"
+  }
+}
