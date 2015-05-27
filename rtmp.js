@@ -17,6 +17,8 @@
 
   MoaLog = require('MoaLog');
 
+  MoaLog.setLevel(MoaLog.LEVEL_DEBUG);
+
   RTMPHeader = (function() {
     RTMPHeader.FULL = 0x00;
 
@@ -272,7 +274,6 @@
       this.readWinSize0 = this.writeWinSize0 = 0;
       this.nextChannelId = RTMPProtocol.PROTOCOL_CHANNEL_ID + 1;
       this.bytesRead = 0;
-      this.debug = false;
       if (this.socket) {
         this.socket.on('data', function(data) {
           return _this.bytesRead += data.length;
@@ -710,13 +711,9 @@
         MoaLog.debug('Got ack');
         return this.writeWinSize0 = msg.data.readUInt32BE(0);
       } else if (msg.type === RTMPMessage.WIN_ACK_SIZE) {
-        if (this.debug) {
-          return MoaLog.debug(msg);
-        }
+        return MoaLog.all(msg);
       } else {
-        if (this.debug) {
-          return MoaLog.debug('UNKNOWN MSG?', msg);
-        }
+        return MoaLog.all('UNKNOWN MSG?', msg);
       }
     };
 
