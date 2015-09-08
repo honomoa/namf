@@ -812,9 +812,20 @@
   })();
 
   RTMPMessage = (function() {
-    var _ref;
-
-    _ref = [0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x08, 0x09, 0x0F, 0x10, 0x11, 0x12, 0x13, 0x14], RTMPMessage.CHUNK_SIZE = _ref[0], RTMPMessage.ABORT = _ref[1], RTMPMessage.ACK = _ref[2], RTMPMessage.USER_CONTROL = _ref[3], RTMPMessage.WIN_ACK_SIZE = _ref[4], RTMPMessage.SET_PEER_BW = _ref[5], RTMPMessage.AUDIO = _ref[6], RTMPMessage.VIDEO = _ref[7], RTMPMessage.DATA3 = _ref[8], RTMPMessage.SHAREDOBJ3 = _ref[9], RTMPMessage.RPC3 = _ref[10], RTMPMessage.DATA = _ref[11], RTMPMessage.SHAREDOBJ = _ref[12], RTMPMessage.RPC = _ref[13];
+    RTMPMessage.CHUNK_SIZE = 0x01;
+    RTMPMessage.ABORT = 0x02;
+    RTMPMessage.ACK = 0x03;
+    RTMPMessage.USER_CONTROL = 0x04;
+    RTMPMessage.WIN_ACK_SIZE = 0x05;
+    RTMPMessage.SET_PEER_BW =  0x06;
+    RTMPMessage.AUDIO = 0x08;
+    RTMPMessage.VIDEO = 0x09;
+    RTMPMessage.DATA3 = 0x0F;
+    RTMPMessage.SHAREDOBJ3 = 0x10;
+    RTMPMessage.RPC3 = 0x11;
+    RTMPMessage.DATA = 0x12;
+    RTMPMessage.SHAREDOBJ = 0x13;
+    RTMPMessage.RPC = 0x14;
 
     function RTMPMessage(header, data) {
       this.header = header;
