@@ -287,6 +287,9 @@
       if (name === 'DSK') {
         AcknowledgeMessage = require('./messaging').AcknowledgeMessage;
         thing = new AcknowledgeMessage();
+      } else if (name === 'DSA') {
+        AsyncMessage = require('./messaging').AsyncMessage;
+        thing = new AsyncMessage();
       } else if (name === 'flex.messaging.io.ArrayCollection') {
         ArrayCollection = require('./messaging').ArrayCollection;
         thing = new ArrayCollection();

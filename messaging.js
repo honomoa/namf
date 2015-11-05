@@ -430,6 +430,8 @@
 
   exports.AbstractMessage = AbstractMessage;
 
+  exports.AsyncMessage = AsyncMessage;
+
   exports.AcknowledgeMessage = AcknowledgeMessage;
 
   exports.ASObject = ASObject;
