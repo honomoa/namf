@@ -1,6 +1,6 @@
 {
   "name": "namf",
-  "version": "0.0.7a",
+  "version": "0.0.7b",
   "description": "node amf parser",
   "author": "Moa Chung",
   "private": true,
